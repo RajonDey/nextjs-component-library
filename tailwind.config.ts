@@ -1,18 +1,19 @@
-import type { Config } from "tailwindcss";
-
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "brand-primary": "#2dd4bf", // Teal
+        "brand-secondary": "#1e293b", // Slate
+        "brand-bg": "#f1f5f9", // Light gray
+        "brand-accent": "#e11d48", // Red
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"], // Use Inter
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
