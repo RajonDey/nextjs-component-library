@@ -26,20 +26,6 @@ export default function RootLayout({
       >
         <header className="bg-brand-primary text-white p-4 flex items-center justify-between">
           <h1 className="text-xl font-bold">NextLib</h1>
-          <nav className="space-x-4">
-            <Link href="/" className="hover:underline">
-              Home
-            </Link>
-            <Link href="/login" className="hover:underline">
-              Login
-            </Link>
-            <Link href="/signup" className="hover:underline">
-              Signup
-            </Link>
-            <Link href="/dashboard" className="hover:underline">
-              Dashboard
-            </Link>
-          </nav>
         </header>
         <main className="min-h-screen p-4">{children}</main>
         <footer className="bg-brand-secondary text-white p-4 text-center">
