@@ -26,6 +26,9 @@ Features are developed in separate branches and merged into `main` when complete
 - **Data Grid** - Unified component combining Pagination, Search Filters, and Data Table.
   - Branch: `feature/data-grid`
   - Docs: [Data Grid](./docs/data-grid.md)
+- **Form Validation** - Form handling with validation.
+  - Branch: `feature/form-validation`
+  - Docs: [Form Validation](./docs/form-validation.md)
 
 *More features coming soon!*
 
@@ -62,4 +65,3 @@ Develop new features in `feature/<name>` branches and submit pull requests to `m
 
 ## License
 [MIT License](#) (or your preferred license)
-```
