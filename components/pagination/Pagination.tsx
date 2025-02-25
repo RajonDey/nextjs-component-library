@@ -16,7 +16,7 @@ const Pagination: React.FC<PaginationProps> = ({
   onPageChange,
   maxVisiblePages = 5,
 }) => {
-  const pages: (number | string)[] = [];
+  const pages: number[] = [];
   const halfVisible = Math.floor(maxVisiblePages / 2);
   let startPage = Math.max(1, currentPage - halfVisible);
   let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
@@ -25,15 +25,9 @@ const Pagination: React.FC<PaginationProps> = ({
     startPage = Math.max(1, endPage - maxVisiblePages + 1);
   }
 
-  if (startPage > 2) pages.push(1, "...");
-  else if (startPage === 2) pages.push(1);
-
   for (let i = startPage; i <= endPage; i++) {
     pages.push(i);
   }
-
-  if (endPage < totalPages - 1) pages.push("...", totalPages);
-  else if (endPage === totalPages - 1) pages.push(totalPages);
 
   return (
     <div className="flex items-center justify-center space-x-2">
@@ -44,25 +38,19 @@ const Pagination: React.FC<PaginationProps> = ({
       >
         Prev
       </button>
-      {pages.map((page, index) =>
-        typeof page === "string" ? (
-          <span key={index} className="px-3 py-1 text-brand-secondary/80">
-            {page}
-          </span>
-        ) : (
-          <button
-            key={page}
-            onClick={() => onPageChange(page)}
-            className={`px-3 py-1 rounded-md ${
-              page === currentPage
-                ? "bg-brand-secondary text-white"
-                : "bg-brand-bg text-brand-secondary hover:bg-brand-primary/20"
-            } transition-colors`}
-          >
-            {page}
-          </button>
-        )
-      )}
+      {pages.map((page) => (
+        <button
+          key={page}
+          onClick={() => onPageChange(page)}
+          className={`px-3 py-1 rounded-md ${
+            page === currentPage
+              ? "bg-brand-secondary text-white"
+              : "bg-brand-bg text-brand-secondary hover:bg-brand-primary/20"
+          } transition-colors`}
+        >
+          {page}
+        </button>
+      ))}
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
