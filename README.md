@@ -1,3 +1,4 @@
+
 # Next.js Component Library (NextLib)
 
 Welcome to **NextLib**, a lightweight, reusable component library built with **Next.js 15 (App Router)**, **React**, **TypeScript**, and **Tailwind CSS**. This library provides modular, pre-built components and features to accelerate your development process.
@@ -39,3 +40,26 @@ Features are developed in separate branches and merged into `main` when complete
    git clone <repo-url>
    cd my-component-library
    ```
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Run the App**:
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:3000` to see the landing page.
+
+   *Note*: To test features, switch to their branches (e.g., `git checkout feature/data-grid`)—docs are in `main`, code is in branches.
+
+## Prerequisites
+- Node.js v18+
+- npm v9+
+- Basic knowledge of Next.js, React, and TypeScript
+
+## Contributing
+Develop new features in `feature/<name>` branches and submit pull requests to `main`. Documentation is added to `main` early for visibility.
+
+## License
+[MIT License](#) (or your preferred license)
+```
