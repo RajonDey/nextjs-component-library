@@ -3,7 +3,7 @@
 Welcome to **NextLib**, a lightweight, reusable component library built with **Next.js 15 (App Router)**, **React**, **TypeScript**, and **Tailwind CSS**. This library provides modular, pre-built components and features to accelerate your development process.
 
 ## Overview
-NextLib offers a simple landing page on the root route (`/`) showcasing available features, along with a consistent design system applied across all components. Each feature is developed in its own branch (e.g., `feature/authentication`) and documented separately within that branch.
+NextLib offers a simple landing page on the root route (`/`) showcasing available features, along with a consistent design system applied across all components. Each feature is developed in its own branch (e.g., `feature/pagination`) and documented separately.
 
 ## Landing Page
 Visit the root URL (`/`) to see the NextLib landing page, featuring:
@@ -12,13 +12,21 @@ Visit the root URL (`/`) to see the NextLib landing page, featuring:
 - A list of current and upcoming features.
 
 ## Available Features
-Features are developed in separate branches and merged into `main` when complete. To explore a feature, check out its branch for code and documentation:
-- **Authentication** - Login, signup, forgot password, and dashboard.
-  - Branch: `feature/authentication`
+Features are developed in separate branches and merged into `main` when complete. Documentation is available in `main`, with code in feature branches until merged:
 - **Pagination** - Navigate pages with prev/next and numbered buttons.
   - Branch: `feature/pagination`
+  - Docs: [Pagination](./docs/pagination.md)
+- **Search Filters** - Filter data with text search and optional category selection.
+  - Branch: `feature/search-filters`
+  - Docs: [Search Filters](./docs/search-filters.md)
+- **Data Table** - Display data in a table.
+  - Branch: `feature/data-table`
+  - Docs: [Data Table](./docs/data-table.md)
+- **Data Grid** - Unified component combining Pagination, Search Filters, and Data Table.
+  - Branch: `feature/data-grid`
+  - Docs: [Data Grid](./docs/data-grid.md)
 
-*More features (e.g., Search) coming soon!*
+*More features coming soon!*
 
 ## Branding
 - **Colors**: Teal (`brand-primary`), Slate (`brand-secondary`), Light Gray (`brand-bg`), Red (`brand-accent`).
@@ -28,6 +36,6 @@ Features are developed in separate branches and merged into `main` when complete
 ## Getting Started
 1. **Clone the Repo**:
    ```bash
-   git clone https://github.com/RajonDey/nextjs-component-library.git
+   git clone <repo-url>
    cd my-component-library
    ```
