@@ -66,3 +66,9 @@ function MyPage() {
 
 ## Data Integration
 - Replace dummy data in `page.tsx` with real API calls:
+```tsx
+const [data, setData] = useState([]);
+useEffect(() => {
+  fetch(`/api/data?page=${currentPage}`).then((res) => res.json()).then(setData);
+}, [currentPage]);
+```
