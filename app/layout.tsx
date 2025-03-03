@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased bg-brand-bg text-brand-secondary`}
+        className={`${inter.variable} antialiased text-brand-secondary`}
       >
         <header className="bg-brand-primary text-white p-4 flex items-center justify-between">
           <h1 className="text-xl font-bold">NextLib</h1>
